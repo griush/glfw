@@ -1,6 +1,8 @@
 project "GLFW"
     kind "StaticLib"
     language "C"
+    staticruntime "off"
+	warnings "off"
 
     targetdir ("bin/" .. output_dir .. "/%{prj.name}")
     objdir ("bin-int/" .. output_dir .. "/%{prj.name}")
@@ -54,6 +56,7 @@ project "GLFW"
 
     filter "system:windows"
         systemversion "latest"
+        staticruntime "off"
 
         files {
             "src/win32_init.c",
