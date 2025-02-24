@@ -1,3 +1,5 @@
+output_dir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
 project "GLFW"
     kind "StaticLib"
     language "C"
